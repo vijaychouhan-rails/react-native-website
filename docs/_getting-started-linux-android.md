@@ -65,6 +65,36 @@ Type `source $HOME/.bash_profile` for `bash` or `source $HOME/.zprofile` to load
 
 > Please make sure you use the correct Android SDK path. You can find the actual location of the SDK in the Android Studio "Settings" dialog, under **Languages & Frameworks** → **Android SDK**.
 
+<h3>React Native Command Line Interface</h3>
+
+React Native has a built-in command line interface. Rather than install and manage a specific version of the CLI globally, we recommend you access the current version at runtime using `npx`, which ships with Node.js. With `npx react-native <command>`, the current stable version of the CLI will be downloaded and executed at the time the command is run.
+
+<h2>Creating a new application</h2>
+
+<RemoveGlobalCLI />
+
+React Native has a built-in command line interface, which you can use to generate a new project. You can access it without installing anything globally using `npx`, which ships with Node.js. Let's create a new React Native project called "AwesomeProject":
+
+```shell
+npx react-native init AwesomeProject
+```
+
+This is not necessary if you are integrating React Native into an existing application, or if you've installed [Expo](https://docs.expo.dev/bare/installing-expo-modules/) in your project, or if you're adding Android support to an existing React Native project (see [Integration with Existing Apps](integration-with-existing-apps.md)). You can also use a third-party CLI to init your React Native app, such as [Ignite CLI](https://github.com/infinitered/ignite).
+
+<h3>[Optional] Using a specific version or template</h3>
+
+If you want to start a new project with a specific React Native version, you can use the `--version` argument:
+
+```shell
+npx react-native init AwesomeProject --version X.XX.X
+```
+
+You can also start a project with a custom React Native template, like TypeScript, with `--template` argument:
+
+```shell
+npx react-native init AwesomeTSProject --template react-native-template-typescript
+```
+
 <h3>Watchman</h3>
 
 Follow the [Watchman installation guide](https://facebook.github.io/watchman/docs/install#buildinstall) to compile and install Watchman from source.
